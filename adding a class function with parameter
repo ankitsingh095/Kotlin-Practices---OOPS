@@ -1,0 +1,42 @@
+fun main() {
+
+// init classes phle initialise hota hai, to jo bhi construct krna hai class me kro, and fir usko run use krna h to main class me kro.
+
+
+    val car = Car(color = "Green", model = "LLm")
+    val secondCar = Car(color = "purple", model = "XLMMMSK")
+    
+    car.color = "Black"
+    car.speed(minspeed = 100, maxSpeed =  199)
+    car.drive()
+    
+    
+    
+    println("Car color: ${car.color} model: ${car.model}")
+    println("Second car color : ${secondCar.color} model: ${secondCar.model}")
+}
+
+
+class Car (var color: String,
+          var model: String) {
+    
+    init {
+        if (color == "Green") {
+            println("Yayy Green")
+        } else {
+            println("$color is not green")
+        }
+        
+        color = "Yellow"
+        model = "KLMMM"
+    }
+    
+    fun speed(minSpeed: Int, maxSpeed: Int) {
+        println("Min speed is $minSpeed and MaxSpeed: $maxSpeed")
+    }
+    
+    fun drive() {
+        println("Drive...Vroom")
+        
+    }
+}
