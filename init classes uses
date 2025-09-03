@@ -1,0 +1,27 @@
+fun main() {
+    val car = Car(color = "Green", model = "LLm")
+    val secondCar = Car(color = "purple", model = "XLMMMSK")
+    
+    println("Car color: ${car.color} model: ${car.model}")
+    println("Second car color : ${secondCar.color} model: ${secondCar.model}")
+}
+
+
+class Car (var color: String,
+          var model: String) {
+    
+    init {
+        if (color == "Green") {
+            println("Yayy Green")
+        } else {
+            println("$color is not green")
+        }
+        
+        color = "Yellow"
+        model = "KLMMM"
+    }
+    
+    fun drive() {
+        println("Drive...vroom")
+    }
+}
