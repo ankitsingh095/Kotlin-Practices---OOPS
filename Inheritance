@@ -1,5 +1,15 @@
 //INHERITANCE
 
+That’s the essence of inheritance in Kotlin:
+
+Use open on parent class/methods.
+
+Child classes use : for inheritance.
+
+Override with override keyword.
+
+
+
 
 // Parent class
 open class Animal {
@@ -20,3 +30,63 @@ fun main() {
     dog.eat()   // inherited from Animal
     dog.bark()  // Dog’s own function
 }
+
+
+
+
+
+
+
+
+
+//2nd Example
+
+
+// Parent class
+open class Person(val name: String) {
+    fun introduce() {
+        println("Hi, my name is $name")
+    }
+}
+
+// Child class
+class Student(name: String, val rollNo: Int) : Person(name) {
+    fun showRollNo() {
+        println("My roll number is $rollNo")
+    }
+}
+
+fun main() {
+    val student = Student("Ankit", 101)
+    student.introduce()   // from Person
+    student.showRollNo()  // from Student
+}
+
+
+-> -> ->  
+Hi, my name is Ankit
+My roll number is 101
+
+
+
+
+OVERIDING  ------------
+
+open class Vehicle {
+    open fun start() {
+        println("Vehicle is starting...")
+    }
+}
+
+class Car : Vehicle() {
+    override fun start() {
+        println("Car engine starts with a key.")
+    }
+}
+
+fun main() {
+    val car = Car()
+    car.start()
+}
+
+---->>>> Car engine starts with a key.
