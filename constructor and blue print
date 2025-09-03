@@ -1,0 +1,30 @@
+fun main() {
+    
+    // this is the architect of the car
+    
+    // dekho jo color and model use kiya hai main function me, usko define niche class me kiya hai, var k sath, mtlab
+    // uski value change kr skte h, and niceh jo class h usko hi constructor class kehte hain.
+    // and fir main me hi new cars wgera ko define krke print kr diyaaa. 
+    
+   val car = Car(color = "Green", model = "LLm")
+   
+   val secondCar = Car(color = "Purple", model = "XXLMMMM")
+   
+//    car.color = "Blue"
+//     car.model = "mDF"
+
+  println("Car color: ${car.color} model: ${car.model}")
+  println("Second car color: ${secondCar.color} model:${car.model}")
+}
+
+class Car(var color: String = "Blue", var model: String = "xmdle") {
+
+//     var color: String = color
+//     var model: String = model
+    
+    // this is the blueprint of the car
+    
+    fun drive() {
+        println("Drive...vroomm")
+    }
+}
