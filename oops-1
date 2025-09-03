@@ -1,0 +1,19 @@
+fun main() {
+    
+   val car = Car()
+   println(car.color)
+   println(car.model)
+   print(car.drive())
+  
+  println("Car color: ${car.color} model: ${car.model}")
+}
+
+class Car {
+    val color: String = "Red"
+    val model: String = "XMD"
+    
+    
+    fun drive() {
+        println("Drive...vroomm")
+    }
+}
